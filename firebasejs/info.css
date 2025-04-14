@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #1a1a2e, #0f0f1a)
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* permettre le défilement */
+    padding: 20px; /* Ajout de marges intérieures pour aérer */
+}
+
+/* From Uiverse.io by Jedi-hongbin */ 
+
+
+.container_button_go_back{
+    position: fixed;
+    margin-left: 20px;
+    top: 0%;
+    left: 0%;
+}
+
+
+#button_go_back {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #1a1a2e;
+   }
+   
+   #button_go_back:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
+
+   #button_go_back::before{
+    content: "⭠";
+   }
+
+#container_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    max-width: 400px; /* Limite la largeur pour un meilleur rendu */
+    width: 100%; /* Pour s'adapter à l'écran */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#image1 {
+    width: 150px; /* Augmentation de la taille de l'image */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold; /* Texte en gras */
+    margin: 10px 0 5px 0;
+    text-align: center; /* Centrage du texte */
+}
+
+input {
+    color: #432000;
+    background-color: #DCE1EB;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Roboto';
+    margin: 10px;
+    width: 250px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border: 0;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Roboto';
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}

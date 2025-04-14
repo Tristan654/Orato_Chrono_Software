@@ -1,0 +1,130 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 18rem;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+#connect-button {
+  background: #e94560;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #d83a55;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.wave-container {
+  width: 100%;
+  height: 15px; /* Ajustez la hauteur selon vos besoins */
+  overflow: hidden; /* Masque les éléments qui dépassent */
+  position: relative; /* Nécessaire pour le positionnement absolu des éléments enfants */
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 191, 255, 0.3), rgba(132, 0, 255, 0.3)); /* Dégradé bleu néon */
+  animation: wave 6s linear infinite; /* Animation des vagues */
+}
+
+.wave::before,
+.wave::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; /* Hérite du dégradé parent */
+  animation: wave 6s linear infinite; /* Même animation, mais décalée */
+}
+
+.wave::before {
+  animation-delay: -2s; /* Décalage pour créer l'effet de multiples vagues */
+}
+
+.wave::after {
+  animation-delay: -4s; /* Décalage pour créer l'effet de multiples vagues */
+  opacity: 0.5; /* Réduit l'opacité pour plus de profondeur */
+}
+
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-20px) translateY(-10px); /* Ajustez les valeurs pour modifier l'amplitude */
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}

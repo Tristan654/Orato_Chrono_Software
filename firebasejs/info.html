@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion des Conférences</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="./info.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&family=Tektur&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="container_button_go_back">
+        <button id="button_go_back">
+          <span>Back</span>
+        </button>
+      </div>
+      <div id="container_image">
+        <img src="assets/logo.png" id="image1" alt="Conférence" />
+        <div id="container">
+          <label for="input-field">Nom de la conférence :</label>
+          <input
+            type="text"
+            id="input-field"
+            placeholder="Entrez le nom de la conférence"
+          />
+
+          <label for="date-field">Date :</label>
+          <input type="date" id="date-field" />
+
+          <label for="heure-field">Heure de début :</label>
+          <input type="time" id="heure-field" />
+
+          <label for="salle-field">Salle :</label>
+          <input type="text" id="salle-field" placeholder="Ex: A102" />
+
+          <label for="admin-field">Administrateur :</label>
+          <input
+            type="email"
+            id="admin-field"
+            placeholder="admin@example.com"
+          />
+
+          <label for="intervenants-field"
+            >Intervenants (séparés par des virgules) :</label
+          >
+          <input
+            type="text"
+            id="intervenants-field"
+            placeholder="Ex: Alice Dupont, Bob Martin"
+          />
+
+          <label for="deroule-field">Déroulé :</label>
+          <input
+            type="text"
+            id="deroule-field"
+            placeholder="Ex: 5min introduction, 3min conclusion"
+          />
+
+          <label for="temps-field"
+            >Temps par intervenant (format: Nom=Temps,Nom=Temps) :</label
+          >
+          <input
+            type="text"
+            id="temps-field"
+            placeholder="Ex: Alice Dupont=10,Bob Martin=8"
+          />
+
+          <button id="add-button">Ajouter la conférence</button>
+        </div>
+      </div>
+      <script src="./info.js" type="module"></script>
+    </main>
+  </body>
+</html>
